@@ -3,13 +3,10 @@ const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
-    // "../server.js",
-    // "../routes/api.js",
     "./index.html",
     "./css/styles.css",
     "./js/index.js",
     "./js/idb.js"
-    // "../models/transaction.js",
 ];
 
 // install service worker
@@ -55,8 +52,6 @@ self.addEventListener('fetch', function (e) {
         return fetch(e.request)
       }
 
-      // You can omit if/else for console.log & put one line below like this too.
-      // return request || fetch(e.request)
     })
   )
 })
